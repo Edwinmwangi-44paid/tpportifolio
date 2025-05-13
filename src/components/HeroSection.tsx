@@ -11,7 +11,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({
-  name = "John Doe",
+  name = "Edwin Mwangi",
   title = "Full-Stack Developer",
   description = "I build modern, responsive, and scalable web applications with cutting-edge technologies.",
   onScrollToProjects = () => {},
