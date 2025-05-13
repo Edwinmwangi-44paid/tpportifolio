@@ -133,7 +133,7 @@ const defaultSkills: Skill[] = [
   { name: "HTML/CSS", level: 95, category: "Frontend" },
   { name: "Next.js", level: 80, category: "Frontend" },
   { name: "Tailwind CSS", level: 90, category: "Frontend" },
-  { name: "Framer Motion", level: 75, category: "Frontend" },
+  { name: "Flutter flow", level: 75, category: "Frontend" },
 
   // Backend
   { name: "Node.js", level: 85, category: "Backend" },

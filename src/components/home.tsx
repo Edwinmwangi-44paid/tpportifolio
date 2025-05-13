@@ -47,7 +47,7 @@ const Home = () => {
         transition={{ duration: 0.5 }}
       >
         <motion.div className="text-2xl font-bold" whileHover={{ scale: 1.05 }}>
-          Portfolio
+          Edwin mwangi
         </motion.div>
 
         <div className="flex items-center gap-6">
@@ -223,11 +223,12 @@ const Home = () => {
       <footer className="py-8 px-6 bg-muted/20 border-t">
         <div className="container mx-auto text-center">
           <p className="text-muted-foreground">
-            &copy; {new Date().getFullYear()} Portfolio. All rights reserved.
+            &copy; {new Date().getFullYear()} edwin mwangi Portfolio. All rights
+            reserved.
           </p>
           <div className="flex justify-center gap-4 mt-4">
             <motion.a
-              href="https://github.com"
+              href="https://github.com/Edwinmwangi-44paid"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
@@ -236,7 +237,7 @@ const Home = () => {
               GitHub
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/edwin-mwangi-9370b7313"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
