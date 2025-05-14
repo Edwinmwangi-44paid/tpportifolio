@@ -97,6 +97,105 @@ const Home = () => {
         </div>
       </motion.nav>
 
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            className="fixed top-[72px] left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-b shadow-lg md:hidden"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.ul
+              className="flex flex-col items-center py-4 space-y-2"
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={{
+                open: { transition: { staggerChildren: 0.1 } },
+                closed: {
+                  transition: { staggerChildren: 0.05, staggerDirection: -1 },
+                },
+              }}
+            >
+              <motion.li
+                variants={{
+                  open: { opacity: 1, y: 0 },
+                  closed: { opacity: 0, y: -10 },
+                }}
+                className="w-full"
+              >
+                <Button
+                  variant="ghost"
+                  className="w-full justify-center"
+                  onClick={() => {
+                    scrollToSection("hero");
+                    setMobileMenuOpen(false);
+                  }}
+                >
+                  Home
+                </Button>
+              </motion.li>
+              <motion.li
+                variants={{
+                  open: { opacity: 1, y: 0 },
+                  closed: { opacity: 0, y: -10 },
+                }}
+                className="w-full"
+              >
+                <Button
+                  variant="ghost"
+                  className="w-full justify-center"
+                  onClick={() => {
+                    scrollToSection("projects");
+                    setMobileMenuOpen(false);
+                  }}
+                >
+                  Projects
+                </Button>
+              </motion.li>
+              <motion.li
+                variants={{
+                  open: { opacity: 1, y: 0 },
+                  closed: { opacity: 0, y: -10 },
+                }}
+                className="w-full"
+              >
+                <Button
+                  variant="ghost"
+                  className="w-full justify-center"
+                  onClick={() => {
+                    scrollToSection("skills");
+                    setMobileMenuOpen(false);
+                  }}
+                >
+                  Skills
+                </Button>
+              </motion.li>
+              <motion.li
+                variants={{
+                  open: { opacity: 1, y: 0 },
+                  closed: { opacity: 0, y: -10 },
+                }}
+                className="w-full"
+              >
+                <Button
+                  variant="ghost"
+                  className="w-full justify-center"
+                  onClick={() => {
+                    scrollToSection("contact");
+                    setMobileMenuOpen(false);
+                  }}
+                >
+                  Contact
+                </Button>
+              </motion.li>
+            </motion.ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Main Content */}
       <main className="pt-20">
         {/* Hero Section */}
