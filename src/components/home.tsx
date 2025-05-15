@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { Sun, Moon } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Sun, Moon, Menu, X } from "lucide-react";
 import HeroSection from "./HeroSection";
 import ProjectsGallery from "./ProjectsGallery";
 import SkillsSection from "./SkillsSection";
@@ -9,6 +9,7 @@ import { Button } from "./ui/button";
 const Home = () => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [scrollY, setScrollY] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Handle theme toggle
   const toggleTheme = () => {
@@ -91,6 +92,25 @@ const Home = () => {
                 <Moon className="h-5 w-5" />
               ) : (
                 <Sun className="h-5 w-5" />
+              )}
+            </Button>
+          </motion.div>
+
+          <motion.div
+            className="md:hidden"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle mobile menu"
+            >
+              {mobileMenuOpen ? (
+                <X className="h-5 w-5" />
+              ) : (
+                <Menu className="h-5 w-5" />
               )}
             </Button>
           </motion.div>
