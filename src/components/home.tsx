@@ -4,6 +4,7 @@ import { Sun, Moon, Menu, X } from "lucide-react";
 import HeroSection from "./HeroSection";
 import ProjectsGallery from "./ProjectsGallery";
 import SkillsSection from "./SkillsSection";
+import ExperienceEducationSection from "./ExperienceEducationSection";
 import { Button } from "./ui/button";
 
 const Home = () => {
@@ -218,6 +219,24 @@ const Home = () => {
                   variant="ghost"
                   className="w-full justify-center"
                   onClick={() => {
+                    scrollToSection("experience-education");
+                    setMobileMenuOpen(false);
+                  }}
+                >
+                  Experience
+                </Button>
+              </motion.li>
+              <motion.li
+                variants={{
+                  open: { opacity: 1, y: 0 },
+                  closed: { opacity: 0, y: -10 },
+                }}
+                className="w-full"
+              >
+                <Button
+                  variant="ghost"
+                  className="w-full justify-center"
+                  onClick={() => {
                     scrollToSection("contact");
                     setMobileMenuOpen(false);
                   }}
@@ -347,6 +366,33 @@ const Home = () => {
                   Send Message
                 </Button>
               </form>
+
+              <div className="mt-6 pt-6 border-t border-border">
+                <motion.a
+                  href="https://wa.me/+254700000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 p-3 bg-green-500 hover:bg-green-600 text-white rounded-md transition-all"
+                  whileHover={{ scale: 1.03 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-message-circle"
+                  >
+                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
+                  </svg>
+                  WhatsApp Me
+                </motion.a>
+              </div>
             </div>
           </div>
         </motion.section>
