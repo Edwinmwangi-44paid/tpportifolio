@@ -48,7 +48,21 @@ const Home = () => {
         transition={{ duration: 0.5 }}
       >
         <motion.div className="text-2xl font-bold" whileHover={{ scale: 1.05 }}>
-          Edwin mwangi
+          <motion.span
+            className="font-dancing inline-block"
+            animate={{
+              y: [0, -5, 0, 3, 0],
+              rotate: [0, 2, 0, -2, 0],
+            }}
+            transition={{
+              duration: 2.5,
+              ease: "easeInOut",
+              repeat: Infinity,
+              repeatType: "loop",
+            }}
+          >
+            Edwin mwangi
+          </motion.span>
         </motion.div>
 
         <div className="flex items-center gap-6">
