@@ -306,6 +306,31 @@ const Home = () => {
           </div>
         </motion.section>
 
+        {/* Experience & Education Section */}
+        <motion.section
+          id="experience-education"
+          className="min-h-screen py-20 px-6"
+          style={{
+            backgroundPositionY: `${scrollY * 0.08}px`,
+          }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="container mx-auto">
+            <motion.h2
+              className="text-4xl font-bold mb-12 text-center"
+              initial={{ y: 50 }}
+              whileInView={{ y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              Experience & Education
+            </motion.h2>
+            <ExperienceEducationSection />
+          </div>
+        </motion.section>
+
         {/* Contact Section */}
         <motion.section
           id="contact"
