@@ -11,6 +11,7 @@ const Home = () => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [scrollY, setScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [messageSent, setMessageSent] = useState(false);
 
   // Handle theme toggle
   const toggleTheme = () => {
@@ -350,7 +351,39 @@ const Home = () => {
               Get In Touch
             </motion.h2>
             <div className="max-w-md mx-auto p-6 bg-card rounded-xl shadow-lg">
-              <form className="space-y-6">
+              <form
+                className="space-y-6"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const nameInput = document.getElementById(
+                    "name",
+                  ) as HTMLInputElement;
+                  const emailInput = document.getElementById(
+                    "email",
+                  ) as HTMLInputElement;
+                  const messageInput = document.getElementById(
+                    "message",
+                  ) as HTMLTextAreaElement;
+
+                  const name = nameInput.value;
+                  const email = emailInput.value;
+                  const message = messageInput.value;
+
+                  if (name && email && message) {
+                    const mailtoLink = `mailto:edumwas4735@gmail.com?subject=Portfolio Contact from ${name}&body=${message}%0A%0AFrom: ${name}%0AEmail: ${email}`;
+                    window.open(mailtoLink, "_blank");
+
+                    // Reset form
+                    nameInput.value = "";
+                    emailInput.value = "";
+                    messageInput.value = "";
+
+                    // Show success message
+                    setMessageSent(true);
+                    setTimeout(() => setMessageSent(false), 5000);
+                  }
+                }}
+              >
                 <div className="space-y-2">
                   <label htmlFor="name" className="block text-sm font-medium">
                     Name
@@ -360,6 +393,7 @@ const Home = () => {
                     id="name"
                     className="w-full p-2 rounded-md border border-input bg-background"
                     placeholder="Your name"
+                    required
                   />
                 </div>
                 <div className="space-y-2">
@@ -371,6 +405,7 @@ const Home = () => {
                     id="email"
                     className="w-full p-2 rounded-md border border-input bg-background"
                     placeholder="your.email@example.com"
+                    required
                   />
                 </div>
                 <div className="space-y-2">
@@ -385,11 +420,22 @@ const Home = () => {
                     rows={5}
                     className="w-full p-2 rounded-md border border-input bg-background"
                     placeholder="Your message here..."
+                    required
                   ></textarea>
                 </div>
                 <Button type="submit" className="w-full">
                   Send Message
                 </Button>
+                {messageSent && (
+                  <motion.div
+                    className="mt-4 p-3 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-md text-center"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    Message sent successfully!
+                  </motion.div>
+                )}
               </form>
 
               <div className="mt-6 pt-6 border-t border-border">
