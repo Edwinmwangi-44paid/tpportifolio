@@ -394,7 +394,7 @@ const Home = () => {
 
               <div className="mt-6 pt-6 border-t border-border">
                 <motion.a
-                  href="https://wa.me/+254700000000"
+                  href="https://wa.me/+254716558456"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 p-3 bg-green-500 hover:bg-green-600 text-white rounded-md transition-all"
