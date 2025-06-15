@@ -13,7 +13,7 @@ import {
 const ExperienceEducationSection = () => {
   const experiences = [
     {
-      title: "Senior Frontend Developer",
+      title: "Machine learning & AI engineer",
       company: "Tech Innovations Inc.",
       period: "2021 - Present",
       description:
@@ -27,7 +27,7 @@ const ExperienceEducationSection = () => {
         "Developed and maintained client websites using modern JavaScript frameworks. Collaborated with designers to implement pixel-perfect UI components.",
     },
     {
-      title: "Junior Developer",
+      title: "Data scientist",
       company: "StartUp Ventures",
       period: "2016 - 2018",
       description:
@@ -44,16 +44,16 @@ const ExperienceEducationSection = () => {
         "Specialized in Web Technologies and User Interface Design. Graduated with honors.",
     },
     {
-      degree: "Bachelor of Science in Information Technology",
-      institution: "State University",
-      period: "2015 - 2019",
+      degree: "Bachelor of Science in Maths & Computer science",
+      institution: "Kenyatta University",
+      period: "2022 - 2026",
       description:
-        "Focused on Software Development and Database Management. Completed capstone project on responsive web design.",
+        "Focused on Software Development and data science. Completed capstone project on responsive web design.",
     },
     {
       degree: "Web Development Bootcamp",
-      institution: "Code Academy",
-      period: "2015",
+      institution: "plp Academy",
+      period: "2025",
       description:
         "Intensive 12-week program covering full-stack web development technologies.",
     },

@@ -139,7 +139,7 @@ const defaultSkills: Skill[] = [
   { name: "Node.js", level: 85, category: "Backend" },
   { name: "Express", level: 80, category: "Backend" },
   { name: "PostgreSQL", level: 75, category: "Backend" },
-  { name: "MongoDB", level: 70, category: "Backend" },
+  { name: "Python", level: 70, category: "Backend" },
   { name: "GraphQL", level: 65, category: "Backend" },
   { name: "REST API Design", level: 85, category: "Backend" },
 
