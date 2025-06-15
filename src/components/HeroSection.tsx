@@ -77,13 +77,15 @@ const HeroSection = ({
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-primary">
+        <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl backdrop-blur-sm">
           <img
-            src="https://api.dicebear.com/7.x/avataaars/svg?seed=developer"
-            alt="Developer Avatar"
-            className="w-full h-full object-cover"
+            src="/profile.jpg"
+            alt="Developer Profile"
+            className="w-full h-full object-cover opacity-95 hover:opacity-100 transition-opacity duration-300"
           />
         </div>
+        {/* Subtle glow effect */}
+        <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/10 to-transparent pointer-events-none" />
       </motion.div>
 
       {/* Animated text introduction */}
