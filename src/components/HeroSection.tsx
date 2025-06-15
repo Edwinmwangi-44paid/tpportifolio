@@ -77,11 +77,11 @@ const HeroSection = ({
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl backdrop-blur-sm">
+        <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl backdrop-blur-sm bg-gradient-to-br from-primary/10 to-transparent">
           <img
             src="./profile.jpg"
             alt="Developer Profile"
-            className="w-full h-full object-cover opacity-95 hover:opacity-100 transition-opacity duration-300"
+            className="w-full h-full object-cover object-center opacity-95 hover:opacity-100 transition-all duration-300 hover:scale-105"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.src =
