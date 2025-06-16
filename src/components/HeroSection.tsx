@@ -13,7 +13,7 @@ interface HeroSectionProps {
 const HeroSection = ({
   name = "AI & ML engineer",
   title = "Software Developer",
-  description = "I build modern, responsive,scalable web applications and also specialize on artificial intelligence and machine learning.",
+  description = "Hello Iam Edwin mwangi, I build modern, responsive,scalable web applications and also specialize on artificial intelligence and machine learning.",
   onScrollToProjects = () => {},
 }: HeroSectionProps) => {
   const [typedText, setTypedText] = useState("");
